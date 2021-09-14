@@ -1,0 +1,2 @@
+we are exporting the data array without a name, so we can just use a name where we are putting it.
+now that array has all the data, so we want to show all of it, so we make a component which retruns all the data, using map

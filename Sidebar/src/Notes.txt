@@ -1,0 +1,13 @@
+As you see context.jsx is behaving like a function, where it parameter is a children , so it takes that parameter , (and like a component) its putting in in the return statement, so its like ,
+pehele ham kya karte the, when we had a update a state using setstate from a component, we used to make a function in the root element to pudate the state, and pass the function to other compoennts through props.
+
+so content.jsx is kinda of a root component provider function, where all the children will have the access to functions to update state, by using usecontext, as now by using the context.jsx , we are making our whole component its children, so everyone now has access to it.
+
+the children props in a component function, is basically what we provide inside the element(tag), so all that is inside is props.children to that component, so we can use that, and make function out of it.
+
+useGlobalcontext is a custom hook, which is nothing but a function , where we use the useContext hook in order to save time.
+
+
+--extra tips
+basically everthing based on component, we need to see the root of it or parent of it, like if the compoennt dikhtra hai th kahya se, aur koi dikhne ka condition hai kya ?, vo compoennt sirf itna time takk dikhega, ok! what factors will be affecting the time in the root, so that our components in timed or condiitoned, so is all abt the root and all.
+

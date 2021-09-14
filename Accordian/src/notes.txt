@@ -1,0 +1,6 @@
+with conditional rendering it is easy to show a element or not, 
+
+now,
+{showNote && <p>{info}</p>}
+from the above example , we saw if the condition is true then display or render the following element,
+we could have also done <p>{showNote && info}</p>, but then the p would just be there, if noting is returned, so why an extra empty element, also previosly we used to do this by css, if onclick then add,classname, stuf like that, so this method eliminated all that and is very usefull

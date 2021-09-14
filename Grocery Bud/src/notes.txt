@@ -1,0 +1,19 @@
+so in our grocery example, when we used useeffect to remove the alert using settimeout.
+cause we gave effect on first render, what was the first render doing after 3 sec alert component will be out of DOM., so it will be switched of, deactiveted, now if we add/remove/edit, a alert will be shown again, and that compoennt, will run other 3sec,
+now the effect function , is a func just to remove that component, nothing else, so the values, can change and re-render, withing that 3sec, after that the fun deactivated/removed the component outside DOM,
+
+We also know , if we have a q of setTimeouts, each and everyone runs one after each other
+
+so in that case , comes our cleanup function,
+a cleanup func runs evertime before the render of the component, then the components loads, and then the callback func of useEffect runs
+for a conditional component
+The above happens when the component is still in DOM, ie we are calling rendering that component again and again,
+but the cleanup fun will run after the component is out of the Dom, so kind of removes all eventhandlerrs....etc
+Cause the task of a cleanup function is to detach whatever was attached before and produce a new for a incoming req
+So when a component goes off dom, an id called later, will have a new vallue/new attachment
+where the cleanup func removes that setimeout from the q before a re-render happens of that component, which means there will be only onesetimeout, of the last button we clicked
+we also changed the dependency, to the list(contains the item), so if the list changes, there will be an alert, so there will use of useEffect everytime caused by change in dependency and so evertime that useEffect will fire ro remove that alert also that cleanup will remove it if there is again change, so again re-render, so befrore re-render cleanUP!
+
+we could have changed to no dependecy , cause if that alert component is allowed to show in dom which means there is a alert of some kind and we will need that useEffect to remove that alert, so having no dependency would have worked too.
+
+So always use cleanup func when using Timers, event listners.
